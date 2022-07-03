@@ -14,9 +14,16 @@ const assignment = {};
  * @returns number the sum of the numbers
  */
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  sum = 0
+  array = arrayOfNumbers
+
+  for (index = 0; index < array.length; index++) {
+    sum = sum + array[index]
+  }
+
+  return (sum)
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+assignment.sumOfNumbers = sumOfNumbers;
 
 /**
  * Challenge - 2
@@ -28,9 +35,18 @@ function sumOfNumbers(arrayOfNumbers) {
  * @returns number the count of even numbers
  */
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  count = 0
+  array = arrayOfNumbers
+  
+  for (index = 0; index < array.length; index++) {
+    if (array[index] % 2 === 0) {
+      count = count + 1
+    }
+  }
+  
+  return count
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+assignment.countEvenNumbers = countEvenNumbers;
 
 /**
  * Challenge - 3
@@ -47,13 +63,16 @@ function countEvenNumbers(arrayOfNumbers) {
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
+  array = arrayOfNumbers
+  
+  fahrenheit = x => Math.trunc((x * 1.8) + 32);
+  fahrenheit = array.map(fahrenheit);
+  return fahrenheit
 }
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 
 // ========================
 // DO NOT EDIT THIS BLOCK
 module.exports = assignment;
 // ========================
-
